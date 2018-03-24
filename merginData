@@ -9,16 +9,16 @@ Created on Mon Mar 19 21:12:58 2018
 from pandas import DataFrame, read_csv
 import matplotlib.pyplot as plt
 import pandas as pd
-Location_one=r'/Users/mbenkhal/Documents/Avivo/code and data/ArrangedData.xlsx'
+Location_one=r'/Users/mbenkhal/Documents/Avivo/MergedData.xlsx'
 Location_two=r'/Users/mbenkhal/Documents/Avivo/admission_discharge_demographic-2.xlsx'
 data_one =  pd.read_excel(Location_one)
 data_two =  pd.read_excel(Location_two)
 data_one.head(5)
 data_two.head(5)
 data_discharge = data_two[data_two['Form.Flag'] == 'discharge']
-data_one["end_service_data"]=pd.to_datetime(data_one["end_service_data"])
-data_one["Reason.discharge"]='not found'
-data_discharge["Form.Date"] = pd.to_datetime(data_discharge["Form.Date"])
+#data_one["end_service_data"]=pd.to_datetime(data_one["end_service_data"])
+#data_one["Reason.discharge"]='not found'
+#data_discharge["Form.Date"] = pd.to_datetime(data_discharge["Form.Date"])
 
 
 for index_2, row_2 in data_one.iterrows():
